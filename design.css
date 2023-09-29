@@ -5,6 +5,7 @@ header {
   font-size: 15px;
   color: white;
   width: 1825px;
+  border-radius: 10px;
 }
 Nav {
   list-style-type: none;
@@ -19,10 +20,44 @@ li a {
   padding:8px 16px;
   text-decoration: none;
 }
+.square-container {
+  display: flex;
+  justify-content: start;
+}
 .square {
-  width: 300px;
+  width: 400px;
   height: 700px;
   background-color: #a16f6c;
   border-radius: 10px;
-  margin-left: 20px;
+  margin-left: 350px;
+  text-align: center;
+  font-family: serif;
 }
+.square h2 {
+  font-size: 50px;
+  color: #5c0404;
+}
+.square p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #5c0404;
+}
+.square button {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #f2d4d7;
+  color: #a16f6c;
+  padding: 14px 20px;
+  margin: 10px 2px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.square button:hover {
+  opacity: 5;
+}
+
+
+
