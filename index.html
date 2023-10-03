@@ -1,32 +1,46 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="design.css">
+    <title>Kokkelicious</title>
+    <script>
+      function redirectToBuyPage(plan) {
+        window.location.href = 'buypage.html?plan=' + encodeURIComponent(plan);
+      }
+    </script>
   </head>
   <body>
     <header>
       <h1>Kokkelicious</h1>
     </header>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="square-container">
+      <div class="square">
+        <h2>King Basics</h2>
+        <p>- Easy and quick meals</p>
+        <p>- Access to all basic meals</p>
+        <p>- Options for vegans and allergies</p>
+        <p>- Cooking step by step</p>
+        <h1>ONLY €2,50 A MONTH</h1>
+        <button onclick="redirectToBuyPage('King Basics')">BUY NOW!</button>
+      </div>
+      <div class="square">
+        <h2>Queen Royale</h2>
+        <p>- everything from the King basics</p>
+        <p>- more advanced meals</p>
+        <p>- more filters</p>
+        <p>- in-depth tutorials</p>
+        <p>- blog feature</p>
+        <h1>ONLY €3,75 A MONTH</h1>
+        <button onclick="redirectToBuyPage('Queen Royale')">BUY NOW!</button>
+      </div>
+    </div>
   </body>
 </html>
-
-
-
-<div class="square-container">
-<div class="square">
-  <h2>King Basics</h2>
-  <p>- Easy and quick meals</p>
-  <p>- Access to all basic meals</p>
-  <p>- Options for vegans and allergies</p>
-  <p>- Cooking step by step</p>
-  <h1>ONLY €2,50 A MONTH</h1>
-  <button onclick="location.href='buypage.html'">BUY NOW!</button>
-</div>
-<div class="square"></div>
-</div>
