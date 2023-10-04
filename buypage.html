@@ -1,3 +1,4 @@
+<!-- buypage.html -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,21 +21,70 @@
       <!-- This is a new square to buy your subscription -->
       <br>
       <br>
-          <!-- buypage.html -->
-<!-- ...previous content... -->
-<p>You have selected: <span id="selectedPlan"></span></p>
-<script>
-  let url = new URL(window.location.href);
-  let plan = url.searchParams.get("plan");
-  if (plan) {
-    document.getElementById("selectedPlan").innerText = plan;
-  }
-</script>
-      <form>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  <input type="submit" value="Submit">
-</form>
+      <!-- ...previous content... -->
+      <p>You have selected: <span id="selectedPlan"></span></p>
+      <form onsubmit="return validateAge();">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required>
+        <br>
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <br>
+        <br>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="phoneNumber" id="phoneNumber" name="phoneNumber" required>
+        <br>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
     </div>
+
+    <script>
+      // Get the selected plan from the URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedPlan = urlParams.get('plan');
+      
+      // Set the value of selectedPlan into the span element
+      document.getElementById('selectedPlan').textContent = selectedPlan;
+      
+      function validateAge() {
+        var birthday = document.getElementById("birthday").value;
+        var today = new Date();
+        var minimumAge = 18;
+        var birthdate = new Date(birthday);
+        var age = today.getFullYear() - birthdate.getFullYear();
+        var m = today.getMonth() - birthdate.getMonth();
+  
+        if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+          age--;
+        }
+  
+        if (age < minimumAge) {
+          alert("You must be at least 18 years old to proceed.");
+          return false;
+        }
+
+        redirectToHomePage();
+        return false;
+      }
+
+      function redirectToHomePage() {
+        window.location.href = 'homepage.html';
+      }
+    </script>
   </body>
 </html>
