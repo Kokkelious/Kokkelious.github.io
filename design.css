@@ -4,7 +4,16 @@ header {
   text-align: center;
   font-size: 15px;
   color: white;
-  width: 1825px;
+  width: 1835px;
+  border-radius: 10px;
+}
+.headerh2 {
+  background-color:#f2d4d0;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  width: 100%;
   border-radius: 10px;
 }
 body {
