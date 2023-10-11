@@ -11,10 +11,11 @@ header {
   background-color:#f2d4d0;
   padding: 10px;
   text-align: center;
-  font-size: 10px;
+  font-size: 18px;
   color: white;
   width: 100%;
   border-radius: 10px;
+  word-spacing: 100px;
 }
 body {
   background-image: url(background.PNG);
@@ -77,4 +78,31 @@ li a {
   height: 500px;
   margin-left: 480px;
   text-align: center;
+}
+.square.home {
+  width: 1400px;
+  height: 900px;
+  margin-left: 420px;
+  background-color: #d4b2a7;
+}
+
+
+.filter-sidebar {
+  background-color: #d4b2a7;
+  padding: 10px;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.filter-option {
+  margin-bottom: 10px;
+}
+
+.filter-option label {
+  display: block;
+  font-weight: bold;
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 5px;
 }
