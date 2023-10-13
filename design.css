@@ -83,10 +83,8 @@ li a {
   width: 1400px;
   height: 900px;
   margin-left: 420px;
-  background-color: #d4b2a7;
+  background-color: #d4b2a7
 }
-
-
 .filter-sidebar {
   background-color: #d4b2a7;
   padding: 10px;
@@ -105,4 +103,8 @@ li a {
 
 .filter-option input[type="checkbox"] {
   margin-right: 5px;
+}
+.recept {
+  margin-left: -16%;
+  float: left;
 }
